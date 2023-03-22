@@ -13,7 +13,7 @@ Ask a specific question.
 Use the following format:<br>
 Question: the input question you must answer<br>
 Thought: you should always think about what to do<br>
-Action: the action to take, should be one of [Terminal Command, File Edit, Web Search]<br>
+Action: the action to take, should be one of [Terminal Command, See file structure, See file contents, File Edit, Web Search]<br>
 Action Input: the input to the action
 
 ... (wait for user input)
