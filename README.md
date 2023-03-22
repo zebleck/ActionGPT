@@ -1,3 +1,30 @@
+# ActionGPT Prompt
+
+Answer the following questions as best you can. You have access to the following tools:
+
+Terminal Command: Execute any command in a simulated terminal environment.
+File Edit: Edit a file using the format: 'filename | content'.
+Web Search: Perform an internet search to answer questions or gather information.
+Email: Format as email_address | subject | body.
+Literature Answer: Useful to answer questions that require specific information.
+
+Ask a specific question.
+
+Use the following format:
+Question: the input question you must answer
+Thought: you should always think about what to do
+Action: the action to take, should be one of [Terminal Command, File Edit, Web Search, Email, Literature Answer]
+Action Input: the input to the action
+Observation: the result of the action
+... (this Thought/Action/Action Input/Observation can repeat N times)
+Thought: I now know the final answer
+Final Answer: the final answer to the original input question
+Begin!
+
+Question: Set up a Docker infrastructure on a cloud server to deploy a web application, including creating a Dockerfile, deploying the container, and configuring the cloud server.
+
+# Bing Conversation
+
 whats the progress of taking bings like chat-gpt or gpt-4 can hooking them up external tools like terminals for making them act on their own.
 Gesendete Nachricht. whats the progress of taking bings like chat-gpt or gpt-4 can hooking them up external tools like terminals for making them act on their own.
 Suchen nach: „bing chat-gpt gpt-4 terminal“
@@ -66,7 +93,7 @@ Antworten für Sie werden generiert…
 
 You want me to write a Python script that uses GPT-4 to write commands for setting up a project in a folder to host a website using docker-compose. That’s an interesting challenge. Here’s a possible solution:
 
-# Import requests library for making API calls
+```# Import requests library for making API calls
 import requests
 
 # Define the API endpoint for ChatGPT Plus
@@ -103,8 +130,8 @@ for command in commands:
     print(f"> {command}")
     os.system(command)
 This is just one possible way to do it. You might want to modify it according to your needs and preferences. I hope this helps you with your project.
+```
 
-Empfangene Nachricht. You want me to write a Python script that uses GPT-4 to write commands for setting up a project in a folder to host a website using docker-compose. That's an interesting challenge. Here's a possible solution: ```python # Import requests library for making API calls import requests # Define the API endpoint for ChatGPT Plus api_url = "https://chatgpt.plus/api/v1/generate" # Define the preheader for GPT-4 to write code preheader = "Write commands for setting up a project in a folder to host a website using docker-compose.\n\nCommands:" # Define the parameters for the API request params = { "model": "gpt-4", # Specify GPT-4 as the model "preheader": preheader, # Pass the preheader as input "temperature": 0.5, # Set the temperature for randomness "top_p": 0.9, # Set the top-p for nucleus sampling "max_tokens": 100 # Set the maximum number of tokens to generate } # Make the API request and get the response as JSON response = requests.get(api_url, params=params).json() # Extract the generated commands from the response commands = response["text"].split("\n")[1:] # Print the generated commands print("Generated commands:") for command in commands: print(command) # Execute each command using os.system and print the output import os print("Executing commands:") for command in commands: print(f"> {command}") os.system(command) ``` This is just one possible way to do it. You might want to modify it according to your needs and preferences. I hope this helps you with your project.
 Weitere Informationen:
 1. docs.docker.com
 2. dzone.com
@@ -206,6 +233,7 @@ You want me to modify the python code from earlier to make it execute commands i
 
 Here is one possible way to do that:
 
+```
 # Importing GPT-4 library
 import gpt4
 
@@ -268,9 +296,9 @@ while loop:
       # Asking user for info and adding it to prompt 
       info_string = input("Enter your additional info: ")
       prompt += '\n' + info_string
+      
+```
 
-Empfangene Nachricht. You want me to modify the python code from earlier to make it execute commands in a loop, where the user has to write a first prompt, then the AI generates commands, the user has to decide which commands to execute, can then decide to feed the output of the commands back into the AI and then can give some additional info that the AI then uses in a loop to generate the next set of commands. Here is one possible way to do that: ```python # Importing GPT-4 library import gpt4 # Initializing GPT-4 model model = gpt4.load_model("actiongpt") # Setting up a loop variable loop = True # Setting up an initial prompt variable prompt = input("Write a first prompt: ") # Looping until loop is False while loop: # Generating commands using GPT-4 based on prompt commands = model.generate_commands(prompt) # Printing commands for user selection print("Here are some possible commands:") for i, command in enumerate(commands): print(f"{i+1}. {command}") # Asking user which command(s) to execute choice = input("Which command(s) do you want to execute? (Enter numbers separated by commas or 'q' to quit): ") # Checking if user wants to quit if choice.lower() == 'q': loop = False else: # Converting choice string into a list of integers choice_list = [int(x) for x in choice.split(',')] # Executing selected commands and storing outputs in a list outputs = [] for i in choice_list: output = exec(commands[i-1]) outputs.append(output) # Printing outputs for user feedback print("Here are the outputs of your selected commands:") for i, output in enumerate(outputs): print(f"{i+1}. {output}") # Asking user if they want to feed back outputs into GPT-4 feedback = input("Do you want to feed back these outputs into GPT-4? (y/n): ") # Checking if user wants feedback if feedback.lower() == 'y': # Concatenating outputs into a single string and adding it to prompt output_string = '\n'.join(outputs) prompt += '\n' + output_string # Asking user if they want to give additional info for GPT-4 info = input("Do you want to give any additional info for GPT-4? (y/n): ") # Checking if user wants info if info.lower() == 'y': # Asking user for info and adding it to prompt info_string = input("Enter your additional info: ") prompt += '\n' + info_string ```
-Weitere Informationen:
 1. bobbyhadz.com
 2. stackoverflow.com
 3. stackoverflow.com
@@ -293,6 +321,7 @@ You want to print the current chat conversation smartly to display it in a markd
 
 Here is one possible way to do that:
 
+```
 # Importing GPT-4 library
 import gpt4
 
@@ -333,3 +362,5 @@ for message in messages:
     print(f"> **{message[0]}**: {message[1]}")
   else:
     print(f"> *{message[0]}*: {message[1]}")
+    
+```
