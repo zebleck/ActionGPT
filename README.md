@@ -3,17 +3,17 @@
 Answer the following questions as best you can. You have access to the following tools:
 
 Terminal Command: Execute any command in a simulated terminal environment.
+See file structure: Return the file structure of the current directory.
+See file contents: Return the contents of a specific file.
 File Edit: Edit a file using the format: 'filename | content'.
 Web Search: Perform an internet search to answer questions or gather information.
-Email: Format as email_address | subject | body.
-Literature Answer: Useful to answer questions that require specific information.
 
 Ask a specific question.
 
 Use the following format:
 Question: the input question you must answer
 Thought: you should always think about what to do
-Action: the action to take, should be one of [Terminal Command, File Edit, Web Search, Email, Literature Answer]
+Action: the action to take, should be one of [Terminal Command, File Edit, Web Search]
 Action Input: the input to the action
 
 ... (wait for user input)
