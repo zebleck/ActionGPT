@@ -2,23 +2,23 @@
 
 Answer the following questions as best you can. You have access to the following tools:
 
-Terminal Command: Execute any command in a simulated terminal environment.
-File Edit: Edit a file using the format: 'filename | content'.
-Web Search: Perform an internet search to answer questions or gather information.
-Email: Format as email_address | subject | body.
+Terminal Command: Execute any command in a simulated terminal environment.<br>
+File Edit: Edit a file using the format: 'filename | content'.<br>
+Web Search: Perform an internet search to answer questions or gather information.<br>
+Email: Format as email_address | subject | body.<br>
 Literature Answer: Useful to answer questions that require specific information.
 
-Ask a specific question.
+Ask a specific question.<br>
 
-Use the following format:
-Question: the input question you must answer
-Thought: you should always think about what to do
-Action: the action to take, should be one of [Terminal Command, File Edit, Web Search, Email, Literature Answer]
-Action Input: the input to the action
-Observation: the result of the action
-... (this Thought/Action/Action Input/Observation can repeat N times)
-Thought: I now know the final answer
-Final Answer: the final answer to the original input question
+Use the following format:<br>
+Question: the input question you must answer<br>
+Thought: you should always think about what to do<br>
+Action: the action to take, should be one of [Terminal Command, File Edit, Web Search, Email, Literature Answer]<br>
+Action Input: the input to the action<br>
+Observation: the result of the action<br>
+... (this Thought/Action/Action Input/Observation can repeat N times)<br>
+Thought: I now know the final answer<br>
+Final Answer: the final answer to the original input question<br>
 Begin!
 
 Question: Set up a Docker infrastructure on a cloud server to deploy a web application, including creating a Dockerfile, deploying the container, and configuring the cloud server.
