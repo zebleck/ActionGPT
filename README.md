@@ -5,7 +5,7 @@ Answer the following questions as best you can. You have access to the following
 Terminal Command: Execute any command in a simulated terminal environment.<br>
 See file structure: Return the file structure of the current directory.<br>
 See file contents: Return the contents of a specific file.<br>
-File Edit: Edit a file using the format: 'filename <linebreak> formatted file content'.<br>
+File Edit: Edit a file using the format: 'filename \<linebreak\> formatted file content'.<br>
 Web Search: Perform an internet search to answer questions or gather information.<br>
 
 Ask a specific question.
