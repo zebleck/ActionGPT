@@ -1,3 +1,13 @@
+# Stale
+
+See:
+
+https://github.com/yoheinakajima/babyagi
+
+https://github.com/Significant-Gravitas/Auto-GPT
+
+https://huggingface.co/spaces/microsoft/HuggingGPT
+
 # ActionGPT Prompt
 
 Answer the following questions as best you can. You have access to the following tools:
